@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mancuernero"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:layout_margin="35dp"
+                android:background="@drawable/logo"
+                />
+
+
+            <Button
+                android:id="@+id/buttonULPPL"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="12dp"
+                android:backgroundTint="#55FFFFFF"
+                android:text="UPPER LOWER PPL" />
+
+            <Button
+                android:id="@+id/button6Days"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="12dp"
+                android:backgroundTint="#55FFFFFF"
+                android:text="P P L 6 DAYS" />
+
+
+
+            <Button
+                android:id="@+id/buttonGirls"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="12dp"
+                android:backgroundTint="#55FFFFFF"
+                android:text="4 dias especial pierna" />
+            <Button
+                android:id="@+id/buttonJorge"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="12dp"
+                android:backgroundTint="#55FFFFFF"
+                android:text="3 dias NO LEGS" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center"
+                >
+
+                <Button
+                    android:id="@+id/buttonCustomUpper"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="12dp"
+                    android:backgroundTint="#55FFFFFF"
+                    android:text="Custom upper " />
+                <Button
+                    android:id="@+id/buttonCustomLower"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="12dp"
+                    android:backgroundTint="#55FFFFFF"
+                    android:text="Custom lower " />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/buttonRegistro"
+                    android:layout_width="250dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginRight="10dp"
+                    android:backgroundTint="#CCFFFFFF"
+                    android:text="registro levantamientos"
+                    android:textColor="@color/black" />
+
+                <Button
+                    android:id="@+id/buttonVistaPreliminar"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:backgroundTint="#88FFFFFF"
+                    android:text="vista previa rutinas"
+                    android:textColor="@color/black" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.deporte">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity
+            android:name=".menu3diasJorge"
+            android:exported="false" />
+        <activity
+            android:name=".menu4diasMiriam"
+            android:exported="false" />
+        <activity
+            android:name=".mostrarPull2"
+            android:exported="false" />
+        <activity
+            android:name=".mostrarPush2"
+            android:exported="false" />
+        <activity
+            android:name=".menuPPL"
+            android:exported="false" />
+        <activity
+            android:name=".mostrarCustomLower"
+            android:exported="false" />
+        <activity
+            android:name=".mostrarCustomUpper"
+            android:exported="false" />
+        <activity
+            android:name=".mostrarLower"
+            android:exported="false" />
+        <activity
+            android:name=".mostrarUpperBrazo"
+            android:exported="false" />
+        <activity
+            android:name=".mostrarPull"
+            android:exported="false" />
+        <activity
+            android:name=".mostrarLegs"
+            android:exported="false" />
+        <activity
+            android:name=".TablaDeRegistros2"
+            android:exported="false" />
+        <activity
+            android:name=".registrosUpperLower"
+            android:exported="false" />
+        <activity
+            android:name=".TablaDeRegistros"
+            android:exported="false" />
+        <activity
+            android:name=".menuULPPL"
+            android:exported="false" />
+        <activity
+            android:name=".mostrarPush"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

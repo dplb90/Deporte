@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mancuernero"
+    tools:context=".registrosUpperLower">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_marginTop="40dp">
+
+        <Button
+            android:id="@+id/regUpper"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_margin="12dp"
+            android:textSize="20dp"
+
+            android:textStyle="bold"
+            android:layout_marginTop="100dp"
+            android:backgroundTint="#55FFFFFF"
+            android:text="Ejercicios tren superior:\n pecho, espalda, hombro, trapecio, biceps y triceps" />
+
+        <Button
+            android:id="@+id/regLower"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_margin="12dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:backgroundTint="#55FFFFFF"
+            android:text="Ejercicios tren inferior:\n cuadriceps, femoral, gluteo y gemelo" />
+
+    </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

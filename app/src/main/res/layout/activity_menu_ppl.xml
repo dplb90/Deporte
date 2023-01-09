@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mancuernero"
+    tools:context=".menuULPPL">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_margin="40dp"
+                android:background="@drawable/benchpress"
+
+                />
+
+            <Button
+                android:id="@+id/buttonPush"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="12dp"
+                android:backgroundTint="#55FFFFFF"
+                android:text="push LUNES" />
+
+            <Button
+                android:id="@+id/buttonPull"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="12dp"
+                android:backgroundTint="#55FFFFFF"
+                android:text="pull MARTES" />
+
+            <Button
+                android:id="@+id/buttonLegs"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="12dp"
+                android:backgroundTint="#55FFFFFF"
+                android:text="legs MIERCOLES" />
+
+            <Button
+                android:id="@+id/buttonPush2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="12dp"
+                android:backgroundTint="#55FFFFFF"
+                android:text="push 2 JUEVES" />
+
+            <Button
+                android:id="@+id/buttonPull2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="12dp"
+                android:backgroundTint="#55FFFFFF"
+                android:text="pull 2 VIERNES" />
+
+            <Button
+                android:id="@+id/buttonLower"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="12dp"
+                android:backgroundTint="#55FFFFFF"
+                android:text="lEGS SABADO" />
+
+
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
