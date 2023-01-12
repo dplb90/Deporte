@@ -7,11 +7,15 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TableLayout;
 import android.widget.TextView;
 
 public class TablaDeRegistros2 extends AppCompatActivity {
 
+    Button btn;
+    EditText et;
     TableLayout tabla;
 
     @Override
@@ -20,18 +24,36 @@ public class TablaDeRegistros2 extends AppCompatActivity {
         setContentView(R.layout.activity_tabla_de_registros2);
 
         tabla=(TableLayout) findViewById(R.id.tblayout);
+        et=(EditText) findViewById(R.id.etborrar);
+        btn =(Button)findViewById(R.id.buttonborrar);
         Consulta2();
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String id = et.getText().toString();
+                AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(TablaDeRegistros2.this, "pruebalower1", null, 1);
+                SQLiteDatabase db = admin.getWritableDatabase();
+                db.execSQL("DELETE FROM lower WHERE id = " + id);
+                db.close();
+                et.setText("");
+                //actualizar la tabla
+                tabla.removeAllViews();
+                Consulta2();
+            }
+        });
+
     }
     //metodo de consulta
     public void Consulta2() {
-        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "pruebalower", null, 1);
+        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "pruebalower1", null, 1);
         SQLiteDatabase db = admin.getWritableDatabase();
 
-        Cursor cursor = db.rawQuery("select nombre,repes1,peso1,repes2,peso2,repes3,peso3,rm,fecha from lower", null);
+        Cursor cursor = db.rawQuery("select id,nombre,repes1,peso1,repes2,peso2,repes3,peso3,rm,fecha from lower", null);
         cursor.moveToFirst();
 
         while (!cursor.isAfterLast()){
             View layout = LayoutInflater.from(this).inflate(R.layout.item_data,null,false);
+            TextView id=(TextView)layout.findViewById(R.id.tvid) ;
             TextView nombre=(TextView)layout.findViewById(R.id.tvNombre);
             TextView repes1=(TextView)layout.findViewById(R.id.tvrepes1);
             TextView peso1=(TextView)layout.findViewById(R.id.tvpeso1);
@@ -42,15 +64,16 @@ public class TablaDeRegistros2 extends AppCompatActivity {
             TextView rm =(TextView)layout.findViewById(R.id.tvrm);
             TextView fecha=(TextView)layout.findViewById(R.id.tvFecha);
 
-            nombre.setText(cursor.getString(0));
-            repes1.setText(cursor.getString(1));
-            peso1.setText(cursor.getString(2));
-            repes2.setText(cursor.getString(3));
-            peso2.setText(cursor.getString(4));
-            repes3.setText(cursor.getString(5));
-            peso3.setText(cursor.getString(6));
-            rm.setText(cursor.getString(7));
-            fecha.setText(cursor.getString(8));
+            id.setText(cursor.getString(0));
+            nombre.setText(cursor.getString(1));
+            repes1.setText(cursor.getString(2));
+            peso1.setText(cursor.getString(3));
+            repes2.setText(cursor.getString(4));
+            peso2.setText(cursor.getString(5));
+            repes3.setText(cursor.getString(6));
+            peso3.setText(cursor.getString(7));
+            rm.setText(cursor.getString(8));
+            fecha.setText(cursor.getString(9));
 
             tabla.addView(layout);
             cursor.moveToNext();

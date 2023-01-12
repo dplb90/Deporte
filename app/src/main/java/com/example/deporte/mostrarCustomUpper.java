@@ -46,7 +46,7 @@ public class mostrarCustomUpper extends AppCompatActivity {
     }
     //metodo para guardar datos serie//
     public void Registrar(View view) {
-        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "pruebaupper", null, 1);
+        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "pruebaupper1", null, 1);
         SQLiteDatabase db = admin.getWritableDatabase();
 
 

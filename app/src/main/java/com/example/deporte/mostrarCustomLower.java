@@ -46,7 +46,7 @@ public class mostrarCustomLower extends AppCompatActivity {
     }
     //metodo para guardar datos serie//
     public void Registrar(View view) {
-        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "pruebalower", null, 1);
+        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "pruebalower1", null, 1);
         SQLiteDatabase db = admin.getWritableDatabase();
 
 
