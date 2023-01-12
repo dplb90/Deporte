@@ -11,7 +11,7 @@ import android.widget.Button;
 
 public class menu4diasMiriam extends AppCompatActivity {
 
-    Button b1,b2,b3,b4;
+    Button b1,b2,b3,b4,b5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +23,7 @@ public class menu4diasMiriam extends AppCompatActivity {
         b2 = (Button) findViewById(R.id.buttonPush);
         b3 = (Button) findViewById(R.id.buttonLower);
         b4 = (Button) findViewById(R.id.buttonPull);
+        b5 = (Button) findViewById(R.id.vistaPreviaMiriam);
 
 
 
@@ -45,7 +46,7 @@ public class menu4diasMiriam extends AppCompatActivity {
         b3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v3) {
-                Intent intentb3 = new Intent(menu4diasMiriam.this, mostrarLower.class);
+                Intent intentb3 = new Intent(menu4diasMiriam.this, mostrarLegsArms.class);
                 startActivity(intentb3);
             }
         });
@@ -54,6 +55,13 @@ public class menu4diasMiriam extends AppCompatActivity {
             public void onClick(View v4) {
                 Intent intentb4 = new Intent(menu4diasMiriam.this, mostrarPull.class);
                 startActivity(intentb4);
+            }
+        });
+        b5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v5) {
+                Intent intentb5 = new Intent(menu4diasMiriam.this, VistaPreviaMiriam.class);
+                startActivity(intentb5);
             }
         });
 

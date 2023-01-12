@@ -13,39 +13,40 @@ import android.widget.Toast;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class mostrarPull2 extends AppCompatActivity {
+public class mostrarPushArms extends AppCompatActivity {
 
     public EditText tvnombre, etrepe1, etpeso1, etrepe2, etpeso2, etrepe3, etpeso3;
     public TextView tvfechas;
 
-    String[] EjerPull = {"REMO c/b", "Remo c/m", "Jalon Elastico Unilateral", "Dominadas Supinas", "Elevación Trasera", "Curl Spider ", "Curl Concentrado", "Curl Inclinado"};
+    String[] EjerPush = {"Press Banca c/m 15º ", "Aperturas 15º", "Dips", "PRESS MILITAR",  "Elevacion Lateral","Press Frances c/m", "Cuerda Triceps", "Elastico"};
     int i = 0;
 
-    String[] RepesPull1 = {"12","12", "20", "12", "15", "15", "17", "12"};
+    String[] RepesPush1 = {"12","15", "12", "12", "15", "15", "15", "20"};
     int j = 0;
 
-    String[] RepesPull2 = {"8", "10", "20", "10", "12", "12", "15", "12"};
+    String[] RepesPush2 = {"8", "12", "10", "12", "12", "12", "12", "15"};
     int k = 0;
 
-    String[] RepesPull3 = {"6", "8", "20", "10", "10", "10", "12", "10"};
+    String[] RepesPush3 = {"8", "10", "8", "10", "10", "10", "10", "15"};
     int l = 0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mostrar_pull2);
+        setContentView(R.layout.activity_mostrar_push_arms);
 
         // check if there is a saved instance state
         if (savedInstanceState != null) {
             // restore the values of the variables
-            i = savedInstanceState.getInt("indexEjerPull");
-            j = savedInstanceState.getInt("indexRepesPull1");
-            k = savedInstanceState.getInt("indexRepesPull2");
-            l = savedInstanceState.getInt("indexRepesPull3");
-            EjerPull = savedInstanceState.getStringArray("EjerPull");
-            RepesPull1 = savedInstanceState.getStringArray("RepesPull1");
-            RepesPull2 = savedInstanceState.getStringArray("RepesPull2");
-            RepesPull3 = savedInstanceState.getStringArray("RepesPull3");
+            i = savedInstanceState.getInt("indexEjerPush");
+            j = savedInstanceState.getInt("indexRepesPush1");
+            k = savedInstanceState.getInt("indexRepesPush2");
+            l = savedInstanceState.getInt("indexRepesPush3");
+            EjerPush = savedInstanceState.getStringArray("EjerPush");
+            RepesPush1 = savedInstanceState.getStringArray("RepesPush1");
+            RepesPush2 = savedInstanceState.getStringArray("RepesPush2");
+            RepesPush3 = savedInstanceState.getStringArray("RepesPush3");
         }
 
         Date date = new Date();
@@ -58,16 +59,19 @@ public class mostrarPull2 extends AppCompatActivity {
         etrepe1 = (EditText) findViewById(R.id.et1);
         etrepe2 = (EditText) findViewById(R.id.et2);
         etrepe3 = (EditText) findViewById(R.id.et3);
-        etrepe1.setText(RepesPull1[j]);
-        etrepe2.setText(RepesPull2[k]);
-        etrepe3.setText(RepesPull3[l]);
+        etrepe1.setText(RepesPush1[j]);
+        etrepe2.setText(RepesPush2[k]);
+        etrepe3.setText(RepesPush3[l]);
 
         etpeso1 = (EditText) findViewById(R.id.et1_1);
         etpeso2 = (EditText) findViewById(R.id.et2_2);
         etpeso3 = (EditText) findViewById(R.id.et3_3);
         tvnombre = (EditText) findViewById(R.id.textNombre);
-        tvnombre.setText(EjerPull[i]);
+        tvnombre.setText(EjerPush[i]);
+
+
     }
+
     //metodo para guardar datos serie//
     public void Registrar(View view) {
         AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "pruebaupper", null, 1);
@@ -87,6 +91,7 @@ public class mostrarPull2 extends AppCompatActivity {
             try {
                 int irepes3 = Integer.parseInt(repes3);
                 int ipeso3 = Integer.parseInt(peso3);
+
                 float RM = (float) (ipeso3 * (1 + 0.025 * irepes3));
                 String rm = (Float.toString(RM) + " kg");
 
@@ -105,7 +110,7 @@ public class mostrarPull2 extends AppCompatActivity {
 
                 db.close();
                 Toast.makeText(this, "ejercicio grabado", Toast.LENGTH_SHORT).show();
-            }catch (NumberFormatException e){
+            }catch(NumberFormatException e){
                 Toast.makeText(this,"Ups! Dato inválido, no guardado",Toast.LENGTH_SHORT).show();
             }
 
@@ -136,7 +141,7 @@ public class mostrarPull2 extends AppCompatActivity {
 
                 db.close();
                 Toast.makeText(this, "ejercicio grabado", Toast.LENGTH_SHORT).show();
-            }catch (NumberFormatException e){
+            }catch(NumberFormatException e){
                 Toast.makeText(this,"Ups! Dato inválido, no guardado",Toast.LENGTH_SHORT).show();
             }
 
@@ -192,10 +197,10 @@ public class mostrarPull2 extends AppCompatActivity {
             j++;
             k++;
             l++;
-            tvnombre.setText(EjerPull[i]);
-            etrepe1.setText(RepesPull1[j]);
-            etrepe2.setText(RepesPull2[k]);
-            etrepe3.setText(RepesPull3[l]);
+            tvnombre.setText(EjerPush[i]);
+            etrepe1.setText(RepesPush1[j]);
+            etrepe2.setText(RepesPush2[k]);
+            etrepe3.setText(RepesPush3[l]);
 
         } else {
             tvnombre.setText("Finalizado!!!");
@@ -207,25 +212,26 @@ public class mostrarPull2 extends AppCompatActivity {
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        outState.putInt("indexEjerPull", i);
-        outState.putInt("indexRepesPull1", j);
-        outState.putInt("indexRepesPull2", k);
-        outState.putInt("indexRepesPull3", l);
-        outState.putStringArray("EjerPull", EjerPull);
-        outState.putStringArray("RepesPull1", RepesPull1);
-        outState.putStringArray("RepesPull2", RepesPull2);
-        outState.putStringArray("RepesPull3", RepesPull3);
+        outState.putInt("indexEjerPush", i);
+        outState.putInt("indexRepesPush1", j);
+        outState.putInt("indexRepesPush2", k);
+        outState.putInt("indexRepesPush3", l);
+        outState.putStringArray("EjerPush", EjerPush);
+        outState.putStringArray("RepesPush1", RepesPush1);
+        outState.putStringArray("RepesPush2", RepesPush2);
+        outState.putStringArray("RepesPush3", RepesPush3);
     }
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
-        i = savedInstanceState.getInt("indexEjerPull");
-        j = savedInstanceState.getInt("indexRepesPull1");
-        k = savedInstanceState.getInt("indexRepesPull2");
-        l = savedInstanceState.getInt("indexRepesPull3");
-        EjerPull = savedInstanceState.getStringArray("EjerPull");
-        RepesPull1 = savedInstanceState.getStringArray("RepesPull1");
-        RepesPull2 = savedInstanceState.getStringArray("RepesPull2");
-        RepesPull3 = savedInstanceState.getStringArray("RepesPull3");
+        i = savedInstanceState.getInt("indexEjerPush");
+        j = savedInstanceState.getInt("indexRepesPush1");
+        k = savedInstanceState.getInt("indexRepesPush2");
+        l = savedInstanceState.getInt("indexRepesPush3");
+        EjerPush = savedInstanceState.getStringArray("EjerPush");
+        RepesPush1 = savedInstanceState.getStringArray("RepesPush1");
+        RepesPush2 = savedInstanceState.getStringArray("RepesPush2");
+        RepesPush3 = savedInstanceState.getStringArray("RepesPush3");
     }
+
 }

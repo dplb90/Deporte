@@ -27,6 +27,14 @@
                 />
 
             <Button
+                android:id="@+id/buttonVistaPrevia"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_margin="12dp"
+                android:backgroundTint="#55FFFFFF"
+                android:text="vista previa" />
+
+            <Button
                 android:id="@+id/buttonPush"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"

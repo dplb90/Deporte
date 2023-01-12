@@ -35,6 +35,19 @@ public class mostrarLower extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mostrar_lower);
 
+        // check if there is a saved instance state
+        if (savedInstanceState != null) {
+            // restore the values of the variables
+            i = savedInstanceState.getInt("indexEjerLower");
+            j = savedInstanceState.getInt("indexRepesLower1");
+            k = savedInstanceState.getInt("indexRepesLower2");
+            l = savedInstanceState.getInt("indexRepesLower3");
+            EjerLower = savedInstanceState.getStringArray("EjerLower");
+            RepesLower1 = savedInstanceState.getStringArray("RepesLower1");
+            RepesLower2 = savedInstanceState.getStringArray("RepesLower2");
+            RepesLower3 = savedInstanceState.getStringArray("RepesLower3");
+        }
+
         Date date = new Date();
         tvfechas = findViewById(R.id.textView);
         SimpleDateFormat fecha = new SimpleDateFormat("yyyy / MM / dd");
@@ -70,88 +83,97 @@ public class mostrarLower extends AppCompatActivity {
         String tiempo = tvfechas.getText().toString();
 
         if (!peso1.isEmpty() && !peso2.isEmpty() && !peso3.isEmpty()) {
-            int irepes3 = Integer.parseInt(repes3);
-            int ipeso3 = Integer.parseInt(peso3);
+            try {
+                int irepes3 = Integer.parseInt(repes3);
+                int ipeso3 = Integer.parseInt(peso3);
+                float RM = (float) (ipeso3 * (1 + 0.025 * irepes3));
+                String rm = (Float.toString(RM) + " kg");
 
-            float RM = (float) (ipeso3 * (1 + 0.025 * irepes3));
-            String rm = (Float.toString(RM) + " kg");
+                ContentValues registro = new ContentValues();
+                registro.put("nombre", nombre);
+                registro.put("repes1", repes1);
+                registro.put("peso1", peso1);
+                registro.put("repes2", repes2);
+                registro.put("peso2", peso2);
+                registro.put("repes3", repes3);
+                registro.put("peso3", peso3);
+                registro.put("rm", rm);
+                registro.put("fecha", tiempo);
 
-            ContentValues registro = new ContentValues();
-            registro.put("nombre", nombre);
-            registro.put("repes1", repes1);
-            registro.put("peso1", peso1);
-            registro.put("repes2", repes2);
-            registro.put("peso2", peso2);
-            registro.put("repes3", repes3);
-            registro.put("peso3", peso3);
-            registro.put("rm", rm);
-            registro.put("fecha", tiempo);
+                db.insert("lower", null, registro);
 
-            db.insert("lower", null, registro);
-
-            db.close();
-
+                db.close();
+                Toast.makeText(this, "ejercicio grabado", Toast.LENGTH_SHORT).show();
+            }catch(NumberFormatException e){
+                Toast.makeText(this,"Ups! Dato inválido, no guardado",Toast.LENGTH_SHORT).show();
+            }
             etpeso1.setText("");
             etpeso2.setText("");
             etpeso3.setText("");
 
-            Toast.makeText(this, "ejercicio grabado", Toast.LENGTH_SHORT).show();
+
 
         }else if(!peso1.isEmpty() && !peso2.isEmpty() && peso3.isEmpty()) {
-            int irepes2 = Integer.parseInt(repes2);
-            int ipeso2 = Integer.parseInt(peso2);
+            try {
+                int irepes2 = Integer.parseInt(repes2);
+                int ipeso2 = Integer.parseInt(peso2);
+                float RM = (float) (ipeso2 * (1 + 0.025 * irepes2));
+                String rm = (Float.toString(RM) + " kg");
 
-            float RM = (float) (ipeso2 * (1 + 0.025 * irepes2));
-            String rm = (Float.toString(RM) + " kg");
+                ContentValues registro = new ContentValues();
+                registro.put("nombre", nombre);
+                registro.put("repes1", repes1);
+                registro.put("peso1", peso1);
+                registro.put("repes2", repes2);
+                registro.put("peso2", peso2);
+                registro.put("repes3", repes3);
+                registro.put("peso3", peso3);
+                registro.put("rm", rm);
+                registro.put("fecha", tiempo);
 
-            ContentValues registro = new ContentValues();
-            registro.put("nombre", nombre);
-            registro.put("repes1", repes1);
-            registro.put("peso1", peso1);
-            registro.put("repes2", repes2);
-            registro.put("peso2", peso2);
-            registro.put("repes3", repes3);
-            registro.put("peso3", peso3);
-            registro.put("rm", rm);
-            registro.put("fecha", tiempo);
+                db.insert("lower", null, registro);
 
-            db.insert("lower", null, registro);
-
-            db.close();
-
+                db.close();
+                Toast.makeText(this, "ejercicio grabado", Toast.LENGTH_SHORT).show();
+            }catch (NumberFormatException e){
+                Toast.makeText(this,"Ups! Dato inválido, no guardado",Toast.LENGTH_SHORT).show();
+            }
             etpeso1.setText("");
             etpeso2.setText("");
             etpeso3.setText("");
 
-            Toast.makeText(this, "ejercicio grabado", Toast.LENGTH_SHORT).show();
+
 
         }else if(!peso1.isEmpty() && peso2.isEmpty() && peso3.isEmpty()){
-            int irepes1 = Integer.parseInt(repes1);
-            int ipeso1 = Integer.parseInt(peso1);
+            try {
+                int irepes1 = Integer.parseInt(repes1);
+                int ipeso1 = Integer.parseInt(peso1);
+                float RM = (float) (ipeso1 * (1 + 0.025 * irepes1));
+                String rm = (Float.toString(RM) + " kg");
 
-            float RM = (float) (ipeso1 * (1 + 0.025 * irepes1));
-            String rm = (Float.toString(RM) + " kg");
+                ContentValues registro = new ContentValues();
+                registro.put("nombre", nombre);
+                registro.put("repes1", repes1);
+                registro.put("peso1", peso1);
+                registro.put("repes2", repes2);
+                registro.put("peso2", peso2);
+                registro.put("repes3", repes3);
+                registro.put("peso3", peso3);
+                registro.put("rm", rm);
+                registro.put("fecha", tiempo);
 
-            ContentValues registro = new ContentValues();
-            registro.put("nombre", nombre);
-            registro.put("repes1", repes1);
-            registro.put("peso1", peso1);
-            registro.put("repes2", repes2);
-            registro.put("peso2", peso2);
-            registro.put("repes3", repes3);
-            registro.put("peso3", peso3);
-            registro.put("rm", rm);
-            registro.put("fecha", tiempo);
+                db.insert("lower", null, registro);
 
-            db.insert("lower", null, registro);
-
-            db.close();
-
+                db.close();
+                Toast.makeText(this, "ejercicio grabado", Toast.LENGTH_SHORT).show();
+            }catch (NumberFormatException e){
+                Toast.makeText(this,"Ups! Dato inválido, no guardado",Toast.LENGTH_SHORT).show();
+            }
             etpeso1.setText("");
             etpeso2.setText("");
             etpeso3.setText("");
 
-            Toast.makeText(this, "ejercicio grabado", Toast.LENGTH_SHORT).show();
+
         } else {
 
 
@@ -162,32 +184,45 @@ public class mostrarLower extends AppCompatActivity {
             Toast.makeText(this, "EJERCICIO NULO, NO GUARDADO", Toast.LENGTH_SHORT).show();
         }
 
-
-        if (i < 5) {
+        if (i < 5 && j < 5 && k < 5 && l < 5 ) {
             i++;
+            j++;
+            k++;
+            l++;
             tvnombre.setText(EjerLower[i]);
+            etrepe1.setText(RepesLower1[j]);
+            etrepe2.setText(RepesLower2[k]);
+            etrepe3.setText(RepesLower3[l]);
+
         } else {
             tvnombre.setText("Finalizado!!!");
-        }
-        if (j < 5) {
-            j++;
-            etrepe1.setText(RepesLower1[j]);
-        } else {
             etrepe1.setText("Fin");
-        }
-        if (k < 5) {
-            k++;
-            etrepe2.setText(RepesLower2[k]);
-        } else {
             etrepe2.setText("Fin");
-        }
-        if (l < 5) {
-            l++;
-            etrepe3.setText(RepesLower3[l]);
-        } else {
             etrepe3.setText("Fin");
         }
-
-
+    }
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt("indexEjerLower", i);
+        outState.putInt("indexRepesLower1", j);
+        outState.putInt("indexRepesLower2", k);
+        outState.putInt("indexRepesLower3", l);
+        outState.putStringArray("EjerLower", EjerLower);
+        outState.putStringArray("RepesLower1", RepesLower1);
+        outState.putStringArray("RepesLower2", RepesLower2);
+        outState.putStringArray("RepesLower3", RepesLower3);
+    }
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        i = savedInstanceState.getInt("indexEjerLower");
+        j = savedInstanceState.getInt("indexRepesLower1");
+        k = savedInstanceState.getInt("indexRepesLower2");
+        l = savedInstanceState.getInt("indexRepesLower3");
+        EjerLower = savedInstanceState.getStringArray("EjerLower");
+        RepesLower1 = savedInstanceState.getStringArray("RepesLower1");
+        RepesLower2 = savedInstanceState.getStringArray("RepesLower2");
+        RepesLower3 = savedInstanceState.getStringArray("RepesLower3");
     }
 }

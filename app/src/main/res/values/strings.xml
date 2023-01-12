@@ -1,3 +1,27 @@
 <resources>
     <string name="app_name">Deporte</string>
+    <string name="previaPPL"> Dia 1 \n\n
+Press banca \n press militar \npress banca 30º\n
+militar c/m \naperturas 15º \nelevacion lateral \nextension elastico
+\nExtension cuerda \n\ndia2\n\n dominadas\nremo meadow\nremo seal c/m\n
+remo c/b\nelevacion trasera\ncurl c/b Z\ncurl martillo\ncurl predicador\n\ndia3\n\n
+curl femoral\nsentadilla\nhipthrust\nlandmine hack\nbulgara\nextension cuadriceps\ncurl femoral\ngemelos unilateral
+\n\ndia4\n\npress militar c/m\npress banca 15º c/m \npress banca 30º c/m\n aperturas 15º c/m\n
+elevacion frontal\nelevacion lateral\ndips\nextension cuerda\n\ndia 5\n\nremo c/b\nremo unilateral\njalon elastico unilateral\ndominadas supinas\n
+elevacion trasera\ncurl spider\ncurl concentrado\ncurl inclinado\n\ndia 6\npeso muerto\ncurl femoral\nextension cuadriceps\n
+sentadilla frontal\n goblet\ngemelos unilateral</string>
+
+    <string name="previaMiriam">\ndia1\n\n
+curl femoral\nsentadilla\nhipthrust\nlandmine hack\nbulgara\nextension cuadriceps\ncurl femoral\ngemelos unilateral
+\n\nDia 2 \n\nPress banca \n press militar \npress banca 30º\n
+militar c/m \naperturas 15º \nelevacion lateral \nextension elastico
+\nExtension cuerda \n\n\ndia 4\n\ncurl femoral\nextension cuadriceps\ncurl femoral\nextension cuadriceps\nsentadilla frontal\ngoblet\nlandmine hack\ngemelos unilateral \n\ndia 5\n\n dominadas\nremo meadow\nremo seal c/m\n
+remo c/b\nelevacion trasera\ncurl c/b Z\ncurl martillo\ncurl predicador\n\</string>
+
+    <string name="previa5diasBrazo">\ndia 1\n\npress banca estrecho\ndominadas supinas\nmilitar c/m\nremo seal c/m\npress frances\ncurl c/b
+        \ncurl concentrado\nelevacion latera\n\ndia2\n\ncurl femoral\nsentadilla\nhipthust\nlandmine hack\nbulgara\nextension cuadriceps\ncurl femoral\n
+        gemelos unilateral\n\ndia3\n\npress banca c/m 15º\naperturas 15º\ndips\npress militar\nelevacion lateral\npress frances c/m\ncuerda triceps\nelastico\n\n
+        dia 4\n\ndominadas asistidas\nshrugs c/m\ncurl martillo\ncurl spider\nremo c/m\n curl inclinado\ncurl predicador\n elevacion trasera\n\ndia5\n\n
+        curl femoral\nextension cuadriceps\ncurl femoral\nextension cuadriceps\nsentadilla frontal\ngoblet\nlandime hack\ngemelos unilateral\n
+    </string>
 </resources>

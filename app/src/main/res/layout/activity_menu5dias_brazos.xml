@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/mancuernero"
-    tools:context=".menuULPPL">
+    tools:context=".menu5diasBrazos">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -21,65 +21,58 @@
             <ImageView
                 android:layout_width="200dp"
                 android:layout_height="200dp"
-                android:layout_margin="40dp"
-                android:background="@drawable/benchpress"
+                android:layout_margin="50dp"
+                android:background="@drawable/arm"
 
                 />
 
             <Button
-                android:id="@+id/buttonVistaPreviappl"
+                android:id="@+id/buttonPreviaArms"
                 android:layout_width="150dp"
                 android:layout_height="match_parent"
                 android:layout_margin="12dp"
                 android:backgroundTint="#55FFFFFF"
                 android:text="vista previa" />
             <Button
-                android:id="@+id/buttonPush"
+                android:id="@+id/buttonUpperArm"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="12dp"
                 android:backgroundTint="#55FFFFFF"
-                android:text="push LUNES" />
+                android:text="Upper" />
 
             <Button
-                android:id="@+id/buttonPull"
+                android:id="@+id/buttonLegsArm"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="12dp"
                 android:backgroundTint="#55FFFFFF"
-                android:text="pull MARTES" />
+                android:text="Legs" />
 
             <Button
-                android:id="@+id/buttonLegs"
+                android:id="@+id/buttonPushArm"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="12dp"
                 android:backgroundTint="#55FFFFFF"
-                android:text="legs MIERCOLES" />
+                android:text="push Especial brazo" />
 
             <Button
-                android:id="@+id/buttonPush2"
+                android:id="@+id/buttonPullArm"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="12dp"
                 android:backgroundTint="#55FFFFFF"
-                android:text="push 2 JUEVES" />
+                android:text="pull especial brazo" />
 
             <Button
-                android:id="@+id/buttonPull2"
+                android:id="@+id/buttonLowerarm"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="12dp"
                 android:backgroundTint="#55FFFFFF"
-                android:text="pull 2 VIERNES" />
+                android:text="lower " />
 
-            <Button
-                android:id="@+id/buttonLower"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="12dp"
-                android:backgroundTint="#55FFFFFF"
-                android:text="lEGS 2 SABADO" />
 
 
         </LinearLayout>

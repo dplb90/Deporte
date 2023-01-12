@@ -10,7 +10,31 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
-            android:name=".menu3diasJorge"
+            android:name=".VistaPreviaArms"
+            android:exported="false" />
+        <activity
+            android:name=".VistaPreviaMiriam"
+            android:exported="false" />
+        <activity
+            android:name=".VistaPreviaPPL"
+            android:exported="false" />
+        <activity
+            android:name=".VistaPreviaULPPL"
+            android:exported="false" />
+        <activity
+            android:name=".mostrarPullArms"
+            android:exported="false" />
+        <activity
+            android:name=".mostrarPushArms"
+            android:exported="false" />
+        <activity
+            android:name=".mostrarLegsArms"
+            android:exported="false" />
+        <activity
+            android:name=".mostrarUpperArms"
+            android:exported="false" />
+        <activity
+            android:name=".menu5diasBrazos"
             android:exported="false" />
         <activity
             android:name=".menu4diasMiriam"

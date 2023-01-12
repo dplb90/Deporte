@@ -19,10 +19,11 @@ public class MainActivity extends AppCompatActivity {
         b1 = (Button) findViewById(R.id.buttonULPPL);
         b2 = (Button) findViewById(R.id.button6Days);
         b3 = (Button) findViewById(R.id.buttonGirls);
+        b4 = (Button) findViewById(R.id.button5diasbrazos);
         b5 = (Button) findViewById(R.id.buttonCustomUpper);
         b6 = (Button) findViewById(R.id.buttonCustomLower);
         b7 = (Button) findViewById(R.id.buttonRegistro);
-        b8 = (Button) findViewById(R.id.buttonVistaPreliminar);
+
 
 
         b1.setOnClickListener(new View.OnClickListener() {
@@ -44,6 +45,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v1) {
                 Intent intent3 = new Intent(MainActivity.this, menu4diasMiriam.class);
                 startActivity(intent3);
+            }
+        });
+        b4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v1) {
+                Intent intent4 = new Intent(MainActivity.this, menu5diasBrazos.class);
+                startActivity(intent4);
             }
         });
 

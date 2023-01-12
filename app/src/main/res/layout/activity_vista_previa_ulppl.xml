@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mancuernero"
+    tools:context=".VistaPreviaULPPL">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="30dp"
+                android:gravity="center"
+                android:text="Dia 1 \n\n
+Press banca \n press militar \npress banca 30º\n
+press militar c/m \naperturas 15º \nelevacion lateral \nextension elastico
+\nExtension cuerda \n\ndia2\n\n dominadas\nremo meadow\nremo seal c/m\n
+remo c/b\nelevacion trasera\ncurl c/b Z\ncurl martillo\ncurl predicador\n\ndia3\n\n
+curl femoral\nsentadilla\nhipthrust\nlandmine hack\nbulgara\nextension cuadriceps\ncurl femoral\ngemelos unilateral
+\n\ndia5\n\npress banca c/m 15º\nshrugs c/m\npress militar c/m\ndiminadas supinas\npress frances\n
+curl spider\ndips\ncurl inclinado\ndeltoides posterior\n\ndia 6\npeso muerto\ncurl femoral\nextension cuadriceps\n
+sentadilla frontal\n goblet\ngemelos unilateral\n"
+                android:textAllCaps="true"
+
+                android:textColor="@color/white" />
+
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

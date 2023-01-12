@@ -13,27 +13,27 @@ import android.widget.Toast;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class mostrarPull2 extends AppCompatActivity {
+public class mostrarPullArms extends AppCompatActivity {
 
     public EditText tvnombre, etrepe1, etpeso1, etrepe2, etpeso2, etrepe3, etpeso3;
     public TextView tvfechas;
 
-    String[] EjerPull = {"REMO c/b", "Remo c/m", "Jalon Elastico Unilateral", "Dominadas Supinas", "Elevación Trasera", "Curl Spider ", "Curl Concentrado", "Curl Inclinado"};
+    String[] EjerPull = {"Dominadas asistidas", "Shrugs Mancuerna", "Curl Martillo", "Curl Spider", "Remo c/m","Curl Inclinado", "Curl predicador", "Elevacion Trasera"};
     int i = 0;
 
-    String[] RepesPull1 = {"12","12", "20", "12", "15", "15", "17", "12"};
+    String[] RepesPull1 = {"20","15", "12", "15", "10", "12", "15", "15"};
     int j = 0;
 
-    String[] RepesPull2 = {"8", "10", "20", "10", "12", "12", "15", "12"};
+    String[] RepesPull2 = {"20", "15", "10", "15", "10", "12", "12", "12"};
     int k = 0;
 
-    String[] RepesPull3 = {"6", "8", "20", "10", "10", "10", "12", "10"};
+    String[] RepesPull3 = {"15", "15", "8", "12", "10", "10", "10", "12"};
     int l = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mostrar_pull2);
+        setContentView(R.layout.activity_mostrar_pull_arms);
 
         // check if there is a saved instance state
         if (savedInstanceState != null) {
@@ -68,6 +68,7 @@ public class mostrarPull2 extends AppCompatActivity {
         tvnombre = (EditText) findViewById(R.id.textNombre);
         tvnombre.setText(EjerPull[i]);
     }
+
     //metodo para guardar datos serie//
     public void Registrar(View view) {
         AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "pruebaupper", null, 1);
@@ -105,7 +106,7 @@ public class mostrarPull2 extends AppCompatActivity {
 
                 db.close();
                 Toast.makeText(this, "ejercicio grabado", Toast.LENGTH_SHORT).show();
-            }catch (NumberFormatException e){
+            }catch(NumberFormatException e){
                 Toast.makeText(this,"Ups! Dato inválido, no guardado",Toast.LENGTH_SHORT).show();
             }
 
@@ -139,7 +140,6 @@ public class mostrarPull2 extends AppCompatActivity {
             }catch (NumberFormatException e){
                 Toast.makeText(this,"Ups! Dato inválido, no guardado",Toast.LENGTH_SHORT).show();
             }
-
             etpeso1.setText("");
             etpeso2.setText("");
             etpeso3.setText("");
@@ -150,6 +150,7 @@ public class mostrarPull2 extends AppCompatActivity {
             try {
                 int irepes1 = Integer.parseInt(repes1);
                 int ipeso1 = Integer.parseInt(peso1);
+
                 float RM = (float) (ipeso1 * (1 + 0.025 * irepes1));
                 String rm = (Float.toString(RM) + " kg");
 

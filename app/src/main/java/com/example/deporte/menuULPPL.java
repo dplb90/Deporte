@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class menuULPPL extends AppCompatActivity {
 
-    Button b1,b2,b3,b4,b5;
+    Button b1,b2,b3,b4,b5,b6;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +21,7 @@ public class menuULPPL extends AppCompatActivity {
         b3 = (Button) findViewById(R.id.buttonLegs);
         b4 = (Button) findViewById(R.id.buttonUpper);
         b5 = (Button) findViewById(R.id.buttonLower);
+        b6 = (Button) findViewById(R.id.buttonVistaPrevia);
 
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,6 +56,13 @@ public class menuULPPL extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intentb5 = new Intent(menuULPPL.this, mostrarLower.class);
                 startActivity(intentb5);
+            }
+        });
+        b6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentb6 = new Intent(menuULPPL.this, VistaPreviaULPPL.class);
+                startActivity(intentb6);
             }
         });
     }
