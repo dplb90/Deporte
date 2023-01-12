@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TableLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class TablaDeRegistros extends AppCompatActivity {
 
@@ -33,14 +34,32 @@ public class TablaDeRegistros extends AppCompatActivity {
                 String id = et.getText().toString();
                 AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(TablaDeRegistros.this, "pruebaupper1", null, 1);
                 SQLiteDatabase db = admin.getWritableDatabase();
-                db.execSQL("DELETE FROM upper WHERE id = " + id);
-                db.close();
-                et.setText("");
-                //actualizar la tabla
-                tabla.removeAllViews();
-                Consulta();
+                try {
+                    int totalRows = tabla.getChildCount();
+                    boolean found = false;
+                    for (int i = 1; i < totalRows; i++) {
+                        View view = tabla.getChildAt(i);
+                        TextView idView = (TextView) view.findViewById(R.id.tvid);
+                        if (idView.getText().toString().equals(id)) {
+                            tabla.removeViewAt(i);
+                            db.execSQL("DELETE FROM upper WHERE id = " + id);
+                            found = true;
+                            break;
+                        }
+                    }
+                    if (!found) {
+                        throw new Exception("El id no existe");
+                    }
+                } catch (Exception e) {
+                    Toast.makeText(TablaDeRegistros.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                } finally {
+                    db.close();
+                    et.setText("");
+                }
             }
         });
+
+
     }
     //metodo de consulta
     public void Consulta() {

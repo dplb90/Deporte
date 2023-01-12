@@ -16,8 +16,6 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
         db.execSQL("create table upper(id integer primary key autoincrement , nombre text, repes1 text, peso1 text, repes2 text, peso2 text, repes3 text, peso3 text,rm text, fecha text)");
         db.execSQL("create table lower(id integer primary key autoincrement , nombre text, repes1 text, peso1 text, repes2 text, peso2 text, repes3 text, peso3 text,rm text, fecha text)");
 
-
-
     }
 
     @Override
