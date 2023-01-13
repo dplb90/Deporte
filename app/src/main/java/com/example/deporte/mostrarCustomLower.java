@@ -24,7 +24,6 @@ public class mostrarCustomLower extends AppCompatActivity {
         setContentView(R.layout.activity_mostrar_custom_lower);
 
         Date date = new Date();
-
         tvfechas = findViewById(R.id.textView);
         SimpleDateFormat fecha = new SimpleDateFormat("yyyy / MM / dd");
         String Fecha = fecha.format(date);

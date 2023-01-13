@@ -12,9 +12,6 @@
         android:layout_height="match_parent"
         android:background="@drawable/bg_color_activity">
 
-        <HorizontalScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
 
 
             <LinearLayout
@@ -24,10 +21,12 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:gravity="center">
 
                     <EditText
                         android:id="@+id/etborrar"
+                        android:inputType="number"
                         android:layout_width="150dp"
                         android:layout_height="50dp"
                         android:layout_margin="20dp"
@@ -43,7 +42,9 @@
                         android:text="borrar segun id" />
 
                 </LinearLayout>
-
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
                 <TableLayout
                     android:id="@+id/tblayout"
@@ -57,7 +58,7 @@
 
                         <TextView
                             android:id="@+id/tv0"
-                            android:layout_width="50dp"
+                            android:layout_width="40dp"
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:text="id"
@@ -76,15 +77,15 @@
                             android:layout_width="45dp"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text="rep1"
+                            android:text="reps1"
                             android:textColor="@color/white" />
 
                         <TextView
                             android:id="@+id/tv3"
-                            android:layout_width="45dp"
+                            android:layout_width="75dp"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text="peso1"
+                            android:text="peso1(Kg)"
                             android:textColor="@color/white" />
 
                         <TextView
@@ -92,15 +93,15 @@
                             android:layout_width="45dp"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text="rep2"
+                            android:text="reps2"
                             android:textColor="@color/white" />
 
                         <TextView
                             android:id="@+id/tv5"
-                            android:layout_width="45dp"
+                            android:layout_width="75dp"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text="peso2"
+                            android:text="peso2(Kg)"
                             android:textColor="@color/white" />
 
                         <TextView
@@ -108,15 +109,15 @@
                             android:layout_width="45dp"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text="rep3"
+                            android:text="reps3"
                             android:textColor="@color/white" />
 
                         <TextView
                             android:id="@+id/tv7"
-                            android:layout_width="45dp"
+                            android:layout_width="80dp"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text="peso3"
+                            android:text="peso3(Kg)"
                             android:textColor="@color/white" />
 
                         <TextView
@@ -138,7 +139,7 @@
                     </TableRow>
 
                 </TableLayout>
-            </LinearLayout>
         </HorizontalScrollView>
+    </LinearLayout>
     </ScrollView>
 </RelativeLayout>
