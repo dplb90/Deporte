@@ -5,8 +5,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/mancuernero"
     tools:context=".menu4diasMiriam">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/mancuernero"
+        android:scaleType="centerCrop"/>
 
     <ScrollView
         android:layout_width="match_parent"
