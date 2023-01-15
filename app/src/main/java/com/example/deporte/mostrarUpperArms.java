@@ -35,9 +35,9 @@ public class mostrarUpperArms extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mostrar_upper_arms);
 
-        // check if there is a saved instance state
+
         if (savedInstanceState != null) {
-            // restore the values of the variables
+
             i = savedInstanceState.getInt("indexEjerPush");
             j = savedInstanceState.getInt("indexRepesPush1");
             k = savedInstanceState.getInt("indexRepesPush2");

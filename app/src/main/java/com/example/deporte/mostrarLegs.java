@@ -40,7 +40,7 @@ public class mostrarLegs extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mostrar_legs);
 
-        // check if there is a saved instance state
+
         if (savedInstanceState != null) {
             // restore the values of the variables
             i = savedInstanceState.getInt("indexEjerLegs");

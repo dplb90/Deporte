@@ -35,9 +35,9 @@ public class mostrarUpperBrazo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mostrar_upper_brazo);
 
-        // check if there is a saved instance state
+        
         if (savedInstanceState != null) {
-            // restore the values of the variables
+
             i = savedInstanceState.getInt("indexEjerUpper");
             j = savedInstanceState.getInt("indexRepesUpper1");
             k = savedInstanceState.getInt("indexRepesUpper2");
